@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Kane Khammanh
+- **Dot Number**: Khammanh.7
+- **Due Date**: 10/17 @11:59 PM
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,7 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
+
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +51,7 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
+
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +66,7 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
+
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +105,12 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+
+I enjoy music, dancing, visual arts, graphic design (anything artistic/creative)
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
+
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +118,7 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
+
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -132,7 +128,7 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
+
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +196,85 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model a music playlist. My intent with this design is to have simple kernel functions that can build a simple playlist, then have more complex secondary methods that can do things like shuffle the playlist.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addSong(String song)` adds the entry to `this`
+    - `void removeSong(String song)` removes the entry `song` from `this`
+    - `int playlistLength()` returns the length of `this`
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void swapSongs(String song1, String song2)` swaps the positions of entries `song1` and `song2` in `this`
+    - `void shuffle()` returns perm(`this`) and perm(`this`) != `this`
+    - `void playNext(String song)` moves `song` to the entry behind front(this)
+    - `void alphabetizePlaylist()` sorts entries of `this` in alphabetical order
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because it will inherit from standard
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - This component will be represented with a queue
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example, `swapSongs()` can be done by removing all songs from the `this` and storing them in another queue, except for `song1` and `song2`. The positions of `song1` and `song2` will be stored, then all elements will be put back into `this` with `song1` and `song2` being enqueued at each other's positions
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: RGB Color Value
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component stores the value of a color in RGB color coding. The kernel methods will be changing the values of the red, green, and blue channels respectively, as well as setting the color to white. The secondary methods will be mixing two colors, finding the complementary color of `this`, and finding the analogous and monochromatic color palette
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void setRed(int k)` sets the red channel of `this` to the value `k`
+    - `void setGreen(int k)` sets the green channel of `this` to the value `k`
+    - `void setBlue(int k)` sets the blue channel of `this` to the value `k`
+    - `void toWhite()` sets all channels to 255, making the color white
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `Color mix(Color a, Color b)` averages the values of the two color's RGB channels to produce a "mix" of the two colors
+    - `Color complementary(Color a)` inverts the values of `Color a`'s channels to find it's complementary on the color wheel
+    - `Sequence<Color> monochromatic(Color a, Channel b, int paletteSize)` creates a monochromatic color palette from `Color a` to white. The amount of colors returned is determined by `paletteSize` and `Channel b` is the color channel who's value does not change
+    - `Sequence<Color> monochromatic(Color a, Channel b, int intensity)` creates a monochromatic color palette of size 3 with 2 colors adjacent to `Color a`. `intensity` defines how much the new colors can vary from the original RGB values
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because it will inherit from Standard
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - This component would use Sequence to represent the color palettes
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - 255 is the maximum value for an RGB channel
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example `complementary` is doing 255 - `channel value` and then setting each channel's value to its result using `setRed(int k)`, `setGreen(int k)`, `setBlue(int k)`
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: BankAccount
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component models a real world bank account. The kernel methods will be adding and withdrawing money, and checking the balance. The secondary methods will be
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void openAccount(int k)` creates a bank account with the initial balance `int k`
+    - `void deposit(int k)` adds `int k` to the bank's balance
+    - `void withdraw(int k)` subtracts `int k` from the bank's balance
+    - `int checkBalance()` returns the balance of `this`
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void transfer(Account a, int k)` transfers `int k` amount of money from `this` to `Account a`
+    - `int writeCheck(int k)` subtracts `int k` from the bank's balance and returns the value as an int
+    - `void earnInterest(int interest, int period)` calculates how much interest `this` will earn at a certain interest rate for a certain period of time
+    - `void setUpPayments(int amount, int period)` Sets up payments from the account's balance, withdrawing money from `this` each time a payment is due
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because it inherits from Standard
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, all methods work with integers
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, there are no constants needed
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example, transfer can be done by withdrawing an amount from on account and depositing that same amount to the other account
 
 ## Post-Assignment
 
@@ -292,9 +305,9 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a music playlist component
+- Designed a RGB color code component
+- Designed a bank account component
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -309,8 +322,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -319,11 +330,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
