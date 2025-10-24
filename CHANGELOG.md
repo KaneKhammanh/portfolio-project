@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## [2025.10.23]
+
+### Added
+
+- Designed a proof of concept for color model component
+
+### Updated
+
+- Switching project focus to color model component
+- Changed design to touch variable directly
+- Added inRange() and printColor() methods
+
 ## [2025.10.16]
 
 ### Added
