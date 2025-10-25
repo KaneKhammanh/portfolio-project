@@ -5,7 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
+## [2025.10.25]
 
+### Added
+- Kernel and enhanced method interfaces for ColorModel component
+
+### Updated
+- Changed toWhite() mathod from a kernel to secondary method
+- Removed one of two monochromatic() method, more clarity and less redundancy having just one
 ## [2025.10.15]
 
 ### Added
