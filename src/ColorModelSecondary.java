@@ -7,6 +7,7 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
     private final int min = 0;
     private final int max = 255;
 
+    @Override
     public void toWhite() {
         assert this != null : "Violation of: this is not null";
 
@@ -15,6 +16,7 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
         this.setBlue(this.max);
     }
 
+    @Override
     public ColorModel mix(ColorModel b) {
         assert this != null : "Violation of: this is not null";
         assert b != null : "Violation of: b is not null";
@@ -28,6 +30,7 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
         return mixed;
     }
 
+    @Override
     public ColorModel complementary(ColorModel b) {
         assert this != null : "Violation of: this is not null";
         assert b != null : "Violation of: b is not null";
@@ -41,6 +44,7 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
         return complement;
     }
 
+    @Override
     public Sequence<ColorModel> monochromatic(int lockedChannel,
             int intensity) {
         assert this != null : "Violation of: this is not null";
