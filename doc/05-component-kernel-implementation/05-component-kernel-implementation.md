@@ -118,7 +118,16 @@ Below is further rationale/explanation for the rubric items above:
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+I will represent the ColorModel component as an array of integers. An RGB color
+code is a set of 3 values representing red, blue, and green, and their values
+range from 0-255. An array works best because its size is static and I will only
+need a collection of size 3. Each index in the array will store an int. It is
+also more convenient to have instant access to each value in the collection
+rather than iterating through the channels and restoring the state of the data.
+So my convention will be an int[] array of size 3. For correspondence,
+index 0 will contain the value for the red channel, index 1 will contain the
+value for the green channel, and index 2 will contain the value for the blue
+channel. Each channel will hold an int value, and they can only range from 0-255
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -140,8 +149,6 @@ Below is further rationale/explanation for the rubric items above:
 > rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 > and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
-
 ## Assignment Tasks
 
 Your primary task for this assignment is to create a kernel implementation that
@@ -160,8 +167,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -195,8 +200,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -247,7 +250,5 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
