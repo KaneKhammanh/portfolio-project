@@ -139,8 +139,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
-
 ## Assignment Tasks
 
 Your primary task for this assignment is to polish up your code and get it
@@ -305,12 +303,25 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I feel that I understand the software development process much more now because
+it is easier to see how everything comes together. As opposed to only working on
+kernel methods, or just testing, I got to work on every part of the project in
+sequence. This made it a lot easier to understand how there is layers to
+software development and how they all come together. Another thing I learned is
+how to use code to solve real world problems better. Before, I was only given
+assignments that required me to use certain components because they had
+verifiable solutions given. by the course. Now, I got the freedom to choose what
+I would make, what components I would use, and how I would use them.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+One thing I had difficulty with was separating kernel methods and secondary
+methods. It had always seemed to me like they were just sorted based on how
+simple the methods were. I now realize that kernel methods are made using just
+basic java tools, and then the secondary methods are built upon the kernel
+methods. Realizing this, I could sort my methods based on if I could make them
+just using regular java, or if I needed other methods to make it
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
