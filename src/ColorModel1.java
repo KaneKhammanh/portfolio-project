@@ -2,7 +2,7 @@ import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 import components.standard.Standard;
 
-public abstract class ColorModelSecondary implements Standard<ColorModel> {
+public abstract class ColorModel1 implements Standard<ColorModel> {
 
     private final int min = 0;
     private final int max = 255;
@@ -21,7 +21,7 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
         assert this != null : "Violation of: this is not null";
         assert b != null : "Violation of: b is not null";
 
-        ColorModel mixed = new ColorModel1L();
+        ColorModel mixed = new ColorModel1();
 
         mixed.setRed((this.getRed() + b.getRed()) / 2);
         mixed.setGreen((this.getGreen() + b.getGreen()) / 2);
@@ -35,7 +35,7 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
         assert this != null : "Violation of: this is not null";
         assert b != null : "Violation of: b is not null";
 
-        ColorModel complement = new ColorModel1L();
+        ColorModel complement = new ColorModel1();
 
         complement.setRed(this.max - this.getRed());
         complement.setGreen(this.max - this.getGreen());
@@ -76,8 +76,8 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
         }
 
         Sequence<ColorModel> palette = new Sequence1L<>();
-        ColorModel color1 = new ColorModel1L();
-        ColorModel color2 = new ColorModel1L();
+        ColorModel color1 = new ColorModel1();
+        ColorModel color2 = new ColorModel1();
 
         switch (lockedChannel) {
             case 0:
