@@ -41,7 +41,7 @@
  * @author Kane Khammanh
  *
  */
-public class ColorModel1 implements ColorModelKernel {
+public class ColorModel implements ColorModelKernel {
 
     /*
      * Private members --------------------------------------------------------
@@ -76,7 +76,7 @@ public class ColorModel1 implements ColorModelKernel {
     /**
      * No-argument constructor.
      */
-    public void ColorModel1() {
+    public void ColorModel() {
         this.createNewRep();
     }
 
@@ -90,7 +90,7 @@ public class ColorModel1 implements ColorModelKernel {
      * @param b
      *            {@code int} to initialize blue channel from
      */
-    public void ColorModel1(int r, int g, int b) {
+    public void ColorModel(int r, int g, int b) {
         this.createNewRep();
 
         this.rep[0] = r;
@@ -103,8 +103,8 @@ public class ColorModel1 implements ColorModelKernel {
      */
 
     @Override
-    public final ColorModel1 newInstance() {
-        ColorModel1 instance = new ColorModel1();
+    public final ColorModel newInstance() {
+        ColorModel instance = new ColorModel();
         return instance;
     }
 
@@ -114,7 +114,7 @@ public class ColorModel1 implements ColorModelKernel {
     }
 
     @Override
-    public final void transferFrom(ColorModel1 source) {
+    public final void transferFrom(ColorModel source) {
         assert source != null : "Violation of: source is not null";
         assert source != this : "Violation of: source is not this";
 
