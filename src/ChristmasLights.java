@@ -1,6 +1,6 @@
 public class ChristmasLights {
 
     public enum Mode {
-        STEADY_ON, STEADY_RED_GREEN, MULTICOLOR, RAINBOW
+        COOL_WHITE, WARM_WHITE, RED_GREEN, MULTICOLOR
     }
 }
