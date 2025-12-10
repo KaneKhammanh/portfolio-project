@@ -2,24 +2,10 @@ import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 import components.standard.Standard;
 
-public abstract class ColorModel1 implements Standard<ColorModel> {
+public abstract class ColorModelSecondary implements Standard<ColorModel> {
 
     private final int min = 0;
     private final int max = 255;
-
-    public void ColorModel1() {
-        int[] rep = new int[3];
-        rep[0] = 0;
-        rep[1] = 0;
-        rep[2] = 0;
-    }
-
-    public void ColorModel1(int i, int j, int k) {
-        int[] rep = new int[3];
-        rep[0] = i;
-        rep[1] = j;
-        rep[2] = k;
-    }
 
     @Override
     public void toWhite() {
