@@ -1,6 +1,6 @@
 /**
- * {@code ColorModel} represented as {@code int[]} of carinality 3, values 0-255
- * with implementation of primary methods
+ * {@code ColorModel} represented as {@code int[]} of cardinality 3, values
+ * 0-255 with implementation of primary methods
  *
  * @convention <pre>
  * [$this.rep.length = 3] and
@@ -41,7 +41,7 @@
  * @author Kane Khammanh
  *
  */
-public class ColorModel implements ColorModelKernel {
+public class ColorModel1 implements ColorModel {
 
     /*
      * Private members --------------------------------------------------------
@@ -76,7 +76,7 @@ public class ColorModel implements ColorModelKernel {
     /**
      * No-argument constructor.
      */
-    public void ColorModel() {
+    public void ColorModel1() {
         this.createNewRep();
     }
 
@@ -90,7 +90,7 @@ public class ColorModel implements ColorModelKernel {
      * @param b
      *            {@code int} to initialize blue channel from
      */
-    public void ColorModel(int r, int g, int b) {
+    public void ColorModel1(int r, int g, int b) {
         this.createNewRep();
 
         this.rep[0] = r;
@@ -104,7 +104,7 @@ public class ColorModel implements ColorModelKernel {
 
     @Override
     public final ColorModel newInstance() {
-        ColorModel instance = new ColorModel();
+        ColorModel instance = new ColorModel1();
         return instance;
     }
 
