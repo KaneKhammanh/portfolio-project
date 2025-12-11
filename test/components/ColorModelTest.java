@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
- * JUnit test fixture for {@code ColorModel1L}'s constructor and kernel methods.
+ * JUnit test fixture for {@code ColorModel}'s constructor and kernel methods.
  *
  * @author Put your name here
  *
