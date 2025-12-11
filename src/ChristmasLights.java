@@ -131,10 +131,10 @@ public class ChristmasLights {
         test1.toggleMode();
 
         ChristmasLights test2 = new ChristmasLights(30);
-        test1.toggleMode();
-        test1.toggleMode();
-        test1.togglePower();
-        test1.toggleMode();
-        test1.toggleMode();
+        test2.toggleMode();
+        test2.toggleMode();
+        test2.togglePower();
+        test2.toggleMode();
+        test2.toggleMode();
     }
 }
