@@ -113,8 +113,7 @@ public class ColorModel1 implements ColorModel {
         this.createNewRep();
     }
 
-    @Override
-    public final void transferFrom(ColorModel source) {
+    public final void transferFrom(object source) {
         assert source != null : "Violation of: source is not null";
         assert source != this : "Violation of: source is not this";
 
