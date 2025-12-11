@@ -327,7 +327,10 @@ just using regular java, or if I needed other methods to make it
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I think I enjoy software development a lot more now. It was always hard for me
+to see how I could apply my knowledge and skills into actually making something.
+After doing this project, I can see how things actually work now, and now I am
+able to create my own data structures.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
