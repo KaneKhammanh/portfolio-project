@@ -1,3 +1,5 @@
+package components.ColorModel;
+
 import components.standard.Standard;
 
 /**
@@ -92,12 +94,24 @@ public interface ColorModelKernel extends Standard<ColorModel> {
     void setBlue(int k);
 
     /**
-     * Reports the value of {@code this} as <r, g, b>, when {@code this} is not
-     * null.
+     * returns the value in the red channel of {@code this}
      *
-     * @requires this != null
-     * @ensures $this = <r, g, b>
+     * @return {@int red} value
      */
-    void printColor();
+    int getRed();
+
+    /**
+     * returns the value in the green channel of {@code this}
+     *
+     * @return {@int green} value
+     */
+    int getGreen();
+
+    /**
+     * returns the value in the blue channel of {@code this}
+     *
+     * @return {@int blue} value
+     */
+    int getBlue();
 
 }

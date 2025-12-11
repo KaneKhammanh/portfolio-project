@@ -1,3 +1,5 @@
+package components.ColorModel;
+
 import components.sequence.Sequence;
 
 /**

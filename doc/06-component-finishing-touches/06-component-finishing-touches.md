@@ -338,29 +338,31 @@ able to create my own data structures.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I learned how to take real world problems or questions and translate it into
+code.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+Created an RGB color model data structure for ease of coding RGB lights
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I think I am interested more in this topic now. I want to continue working on
+projects similar to this
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I will continue to work on projects like this where it is something I enjoy or
+am interested in. I will continue to contact professors, TA's and other faculty
+in the CSE department to help me stay on my path.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -396,7 +398,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull

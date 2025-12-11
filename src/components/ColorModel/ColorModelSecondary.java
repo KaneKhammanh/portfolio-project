@@ -1,8 +1,9 @@
+package components.ColorModel;
+
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
-import components.standard.Standard;
 
-public abstract class ColorModelSecondary implements Standard<ColorModel> {
+public abstract class ColorModelSecondary extends ColorModel1 {
 
     private final int MIN = 0;
     private final int MAX = 255;
@@ -121,8 +122,7 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
         return this.getRed() + ", " + this.getGreen() + ", " + this.getBlue();
     }
 
-    @Override
-    public boolean equals(object b) {
+    public boolean equals(ColorModel b) {
         assert this != null : "Violation of: this is not null";
         assert b != null : "Violation of: b is not null";
 
