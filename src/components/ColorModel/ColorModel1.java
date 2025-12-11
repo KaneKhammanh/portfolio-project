@@ -81,7 +81,7 @@ public class ColorModel1 implements ColorModel {
     /**
      * No-argument constructor.
      */
-    public void ColorModel1() {
+    public void ColorModel() {
         this.createNewRep();
     }
 
@@ -95,12 +95,14 @@ public class ColorModel1 implements ColorModel {
      * @param b
      *            {@code int} to initialize blue channel from
      */
-    public void ColorModel1(int r, int g, int b) {
+    public ColorModel ColorModel(int r, int g, int b) {
         this.createNewRep();
 
         this.rep[0] = r;
         this.rep[1] = g;
         this.rep[2] = b;
+
+        return this;
     }
 
     /*
