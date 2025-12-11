@@ -14,7 +14,7 @@ public abstract class ColorModel1Test {
 
     @Test
     public final void testConstructor() {
-        ColorModel s = new ColorModel1L();
+        ColorModel s = new ColorModel1();
 
         assert s != null;
 
