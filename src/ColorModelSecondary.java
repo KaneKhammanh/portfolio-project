@@ -122,7 +122,7 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
     }
 
     @Override
-    public boolean equals(ColorModel b) {
+    public boolean equals(object b) {
         assert this != null : "Violation of: this is not null";
         assert b != null : "Violation of: b is not null";
 
