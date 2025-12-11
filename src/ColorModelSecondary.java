@@ -4,16 +4,16 @@ import components.standard.Standard;
 
 public abstract class ColorModelSecondary implements Standard<ColorModel> {
 
-    private final int min = 0;
-    private final int max = 255;
+    private final int MIN = 0;
+    private final int MAX = 255;
 
     @Override
     public void toWhite() {
         assert this != null : "Violation of: this is not null";
 
-        this.setRed(this.max);
-        this.setGreen(this.max);
-        this.setBlue(this.max);
+        this.setRed(this.MAX);
+        this.setGreen(this.MAX);
+        this.setBlue(this.MAX);
     }
 
     @Override
@@ -31,15 +31,14 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
     }
 
     @Override
-    public ColorModel complementary(ColorModel b) {
+    public ColorModel complementary() {
         assert this != null : "Violation of: this is not null";
-        assert b != null : "Violation of: b is not null";
 
         ColorModel complement = new ColorModel1();
 
-        complement.setRed(this.max - this.getRed());
-        complement.setGreen(this.max - this.getGreen());
-        complement.setBlue(this.max - this.getBlue());
+        complement.setRed(this.MAX - this.getRed());
+        complement.setGreen(this.MAX - this.getGreen());
+        complement.setBlue(this.MAX - this.getBlue());
 
         return complement;
     }
@@ -51,27 +50,27 @@ public abstract class ColorModelSecondary implements Standard<ColorModel> {
         assert lockedChannel >= 0
                 && lockedChannel <= 2 : "Violation of: lockedChannel is not a valid color channel";
         if (lockedChannel == 0) {
-            assert this.getGreen() - intensity >= this.min
-                    && intensity <= this.max - this
+            assert this.getGreen() - intensity >= this.MIN
+                    && intensity <= this.MAX - this
                             .getGreen() : "Violation of: Intensity reaches outside of range 0-255 for green channel";
-            assert this.getBlue() - intensity >= this.min
-                    && intensity <= this.max - this
+            assert this.getBlue() - intensity >= this.MIN
+                    && intensity <= this.MAX - this
                             .getBlue() : "Violation of: Intensity reaches outside of range 0-255 for blue channel";
         }
         if (lockedChannel == 1) {
-            assert this.getRed() - intensity >= this.min
-                    && intensity <= this.max - this
+            assert this.getRed() - intensity >= this.MIN
+                    && intensity <= this.MAX - this
                             .getRed() : "Violation of: Intensity reaches outside of range 0-255 for red channel";
-            assert this.getBlue() - intensity >= this.min
-                    && intensity <= this.max - this
+            assert this.getBlue() - intensity >= this.MIN
+                    && intensity <= this.MAX - this
                             .getBlue() : "Violation of: Intensity reaches outside of range 0-255 for blue channel";
         }
         if (lockedChannel == 2) {
-            assert this.getRed() - intensity >= this.min
-                    && intensity <= this.max - this
+            assert this.getRed() - intensity >= this.MIN
+                    && intensity <= this.MAX - this
                             .getRed() : "Violation of: Intensity reaches outside of range 0-255 for red channel";
-            assert this.getGreen() - intensity >= this.min
-                    && intensity <= this.max - this
+            assert this.getGreen() - intensity >= this.MIN
+                    && intensity <= this.MAX - this
                             .getGreen() : "Violation of: Intensity reaches outside of range 0-255 for green channel";
         }
 
