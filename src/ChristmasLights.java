@@ -1,3 +1,5 @@
+import ColorModel;
+import ColorModel1;
 
 public class ChristmasLights {
 
