@@ -1,5 +1,4 @@
-import ColorModel;
-import ColorModel1;
+import components.ColorModel.ColorModel;
 
 public class ChristmasLights {
 
@@ -28,10 +27,10 @@ public class ChristmasLights {
         this.isOn = false;
         this.lightMode = Mode.COOL_WHITE;
 
-        this.lights = new ColorModel[];
+        this.lights = new ColorModel[length];
 
         for (int i = 0; i < length; i++) {
-            this.lights[i] = new ColorModel1(230, 230, 255);
+            this.lights[i] = new ColorModel(230, 230, 255);
         }
     }
 
@@ -56,7 +55,7 @@ public class ChristmasLights {
                 this.lightMode = Mode.WARM_WHITE;
 
                 for (int i = 0; i < this.length; i++) {
-                    this.lights[i] = new ColorModel1(255, 255, 200);
+                    this.lights[i] = new ColorModel(255, 255, 200);
                 }
 
                 System.out.println("Switched to warm white light mode.");
@@ -72,9 +71,9 @@ public class ChristmasLights {
 
                 for (int i = 0; i < this.length; i++) {
                     if (i % 2 == 0) {
-                        this.lights[i] = new ColorModel1(255, 0, 0);
+                        this.lights[i] = new ColorModel(255, 0, 0);
                     } else {
-                        this.lights[i] = new ColorModel1(0, 255, 0);
+                        this.lights[i] = new ColorModel(0, 255, 0);
                     }
                 }
 
@@ -91,13 +90,13 @@ public class ChristmasLights {
 
                 for (int i = 0; i < this.length; i++) {
                     if (i % 4 == 0) {
-                        this.lights[i] = new ColorModel1(255, 0, 0);
+                        this.lights[i] = new ColorModel(255, 0, 0);
                     } else if (i % 4 == 1) {
-                        this.lights[i] = new ColorModel1(255, 255, 0);
+                        this.lights[i] = new ColorModel(255, 255, 0);
                     } else if (i % 4 == 2) {
-                        this.lights[i] = new ColorModel1(0, 255, 0);
+                        this.lights[i] = new ColorModel(0, 255, 0);
                     } else if (i % 4 == 3) {
-                        this.lights[i] = new ColorModel1(0, 0, 255);
+                        this.lights[i] = new ColorModel(0, 0, 255);
                     }
                 }
 
@@ -113,7 +112,7 @@ public class ChristmasLights {
                 this.lightMode = Mode.COOL_WHITE;
 
                 for (int i = 0; i < this.length; i++) {
-                    this.lights[i] = new ColorModel1(230, 230, 255);
+                    this.lights[i] = new ColorModel(230, 230, 255);
                 }
 
                 System.out.println("Switched to cool white light mode.");
